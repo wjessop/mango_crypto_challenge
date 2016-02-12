@@ -87,12 +87,12 @@ Words:
 }
 
 func rotator_for(s string) func() rune {
-	current_i := 0
+	i := 0
 	return func() rune {
-		next_rune := rune(s[current_i])
-		current_i = current_i + 1
-		if current_i == len(s) {
-			current_i = 0
+		next_rune := rune(s[i])
+		i = i + 1
+		if i == len(s) {
+			i = 0
 		}
 		return next_rune
 	}
